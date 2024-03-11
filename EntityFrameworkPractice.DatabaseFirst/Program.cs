@@ -8,7 +8,7 @@ internal class Program
 	static async Task Main(string[] args)
 	{
 		DbContextInitializer.Build();
-		using (var context = new DbFirstContext(DbContextInitializer.OptionsBuilder.Options))
+		using (var context = new DbFirstContext())
 		{
 			var products =  await context.Products.ToListAsync();
 

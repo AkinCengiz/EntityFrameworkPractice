@@ -19,7 +19,7 @@ public class DbContextInitializer
 			.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 		Configuration = builder.Build();
 
-		OptionsBuilder = new DbContextOptionsBuilder<DbFirstContext>();
-		OptionsBuilder.UseSqlServer(Configuration.GetConnectionString("SqlCon"));
+		//OptionsBuilder = new DbContextOptionsBuilder<DbFirstContext>();
+		//OptionsBuilder.UseSqlServer(Configuration.GetConnectionString("SqlCon"));
 	}
 }
