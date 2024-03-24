@@ -4,6 +4,7 @@ using EntityFrameworkPractice.EfCodeFirst.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EntityFrameworkPractice.EfCodeFirst.Migrations
 {
     [DbContext(typeof(EfCodeFirstDbContext))]
-    partial class EfCodeFirstDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240316154402_ProductsTableAddCreateDateColumn")]
+    partial class ProductsTableAddCreateDateColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

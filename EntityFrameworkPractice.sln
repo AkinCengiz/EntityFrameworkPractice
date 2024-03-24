@@ -5,9 +5,11 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkPractice.DatabaseFirst", "EntityFrameworkPractice.DatabaseFirst\EntityFrameworkPractice.DatabaseFirst.csproj", "{EB47D0F9-7B9C-46F2-A9B4-2A5177F39DC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkPractice.DbFirstScaffold", "EntityFrameworkPractice.DbFirstScaffold\EntityFrameworkPractice.DbFirstScaffold.csproj", "{20C0183C-66A2-4F0D-ABD5-8B704C992CF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkPractice.DbFirstScaffold", "EntityFrameworkPractice.DbFirstScaffold\EntityFrameworkPractice.DbFirstScaffold.csproj", "{20C0183C-66A2-4F0D-ABD5-8B704C992CF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkPractice.EfCodeFirst", "EntityFrameworkPractice.EfCodeFirst\EntityFrameworkPractice.EfCodeFirst.csproj", "{66499284-84D9-4C60-8569-BA16E0150948}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkPractice.EfCodeFirst", "EntityFrameworkPractice.EfCodeFirst\EntityFrameworkPractice.EfCodeFirst.csproj", "{66499284-84D9-4C60-8569-BA16E0150948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkPractice.RelationShips", "EntityFrameworkPractice.RelationShips\EntityFrameworkPractice.RelationShips.csproj", "{D6ADEF51-2F40-422E-B3EB-049575B64729}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{66499284-84D9-4C60-8569-BA16E0150948}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66499284-84D9-4C60-8569-BA16E0150948}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66499284-84D9-4C60-8569-BA16E0150948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6ADEF51-2F40-422E-B3EB-049575B64729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6ADEF51-2F40-422E-B3EB-049575B64729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6ADEF51-2F40-422E-B3EB-049575B64729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6ADEF51-2F40-422E-B3EB-049575B64729}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
