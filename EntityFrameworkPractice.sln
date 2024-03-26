@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkPractice.DbF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkPractice.EfCodeFirst", "EntityFrameworkPractice.EfCodeFirst\EntityFrameworkPractice.EfCodeFirst.csproj", "{66499284-84D9-4C60-8569-BA16E0150948}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkPractice.RelationShips", "EntityFrameworkPractice.RelationShips\EntityFrameworkPractice.RelationShips.csproj", "{D6ADEF51-2F40-422E-B3EB-049575B64729}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkPractice.RelationShips", "EntityFrameworkPractice.RelationShips\EntityFrameworkPractice.RelationShips.csproj", "{D6ADEF51-2F40-422E-B3EB-049575B64729}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkPractice.RelatedDataLoad", "EntityFrameworkPractice.RelatedDataLoad\EntityFrameworkPractice.RelatedDataLoad.csproj", "{989DB930-0314-4F30-A2AF-CF8D6FEFF06F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkPractice.Inheritance", "EntityFrameworkPractice.Inheritance\EntityFrameworkPractice.Inheritance.csproj", "{92A475C1-9A21-4920-9EDB-0909F86508E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{D6ADEF51-2F40-422E-B3EB-049575B64729}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6ADEF51-2F40-422E-B3EB-049575B64729}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6ADEF51-2F40-422E-B3EB-049575B64729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{989DB930-0314-4F30-A2AF-CF8D6FEFF06F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{989DB930-0314-4F30-A2AF-CF8D6FEFF06F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{989DB930-0314-4F30-A2AF-CF8D6FEFF06F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{989DB930-0314-4F30-A2AF-CF8D6FEFF06F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A475C1-9A21-4920-9EDB-0909F86508E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A475C1-9A21-4920-9EDB-0909F86508E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A475C1-9A21-4920-9EDB-0909F86508E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A475C1-9A21-4920-9EDB-0909F86508E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

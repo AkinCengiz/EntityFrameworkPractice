@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFrameworkPractice.RelationShips.Entity;
-public class Category
+namespace EntityFrameworkPractice.Inheritance.Entity;
+public class Animal
 {
     public int Id { get; set; }
     public string Name { get; set; }
-    public virtual List<Product> Products { get; set; } = new List<Product>();
+    public decimal Length { get; set; }
+    public decimal Weight { get; set; }
+    public int Age { get; set; }
+
 }

@@ -12,24 +12,19 @@ internal class Program
         Initializer.Build();
         using (var context = new EntityRelationContext())
         {
+            var category = context.Categories.First();
+            var products = category.Products;
 
-
-            var categoryWithProduct = context.Categories.Include(x => x.Products).First();
-
-            Console.WriteLine(categoryWithProduct.Name + " Kategorisinde bulunan ürünler\n*************************************\n");
-            foreach (var product in categoryWithProduct.Products)
+            foreach (var product in products)
             {
                 Console.WriteLine(product.Name);
             }
-
-            categoryWithProduct =
-                context.Categories.Include(p => p.Products).ThenInclude(t => t.ProductFeature).First();
-
-            Console.WriteLine(categoryWithProduct.Name + " Kategorisinde bulunan ürünler\n*************************************\n");
-            foreach (var product in categoryWithProduct.Products)
+            products.ForEach(p =>
             {
-                Console.WriteLine($"Name : {product.Name}\tPrice{product.Price}\nÖzellikleri\t:\n**********************************\nColor\t: {product.ProductFeature.Color}\tWidth\t: {product.ProductFeature.Width}\tHeight\t:{product.ProductFeature.Height}");
-            }
+                Console.WriteLine(p.Name);
+            });
+            //EagerLoading(context);
+
 
             //CategoryProductAdd(context);
 
@@ -40,6 +35,29 @@ internal class Program
             //NewMethod4(context);
 
             //NewMethod5(context);
+        }
+    }
+
+    private static void EagerLoading(EntityRelationContext context)
+    {
+        var categoryWithProduct = context.Categories.Include(x => x.Products).First();
+
+        Console.WriteLine(categoryWithProduct.Name +
+                          " Kategorisinde bulunan ürünler\n*************************************\n");
+        foreach (var product in categoryWithProduct.Products)
+        {
+            Console.WriteLine(product.Name);
+        }
+
+        categoryWithProduct =
+            context.Categories.Include(p => p.Products).ThenInclude(t => t.ProductFeature).First();
+
+        Console.WriteLine(categoryWithProduct.Name +
+                          " Kategorisinde bulunan ürünler\n*************************************\n");
+        foreach (var product in categoryWithProduct.Products)
+        {
+            Console.WriteLine(
+                $"Name : {product.Name}\tPrice{product.Price}\nÖzellikleri\t:\n**********************************\nColor\t: {product.ProductFeature.Color}\tWidth\t: {product.ProductFeature.Width}\tHeight\t:{product.ProductFeature.Height}");
         }
     }
 

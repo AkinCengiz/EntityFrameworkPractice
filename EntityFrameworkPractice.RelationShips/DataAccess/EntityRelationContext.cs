@@ -15,7 +15,7 @@ public class EntityRelationContext : DbContext
         Initializer.Build();
         //optionsBuilder.UseSqlServer(
         //    @"Data Source=AKINCENGIZ;initial catalog=EntityRelationshipDb;Integrated Security=True;Trust Server Certificate=True;");
-        optionsBuilder.UseSqlServer(Initializer.Configuration.GetConnectionString("SqlCon"));
+        optionsBuilder.UseSqlServer(Initializer.Configuration.GetConnectionString("SqlCon2"));
     }
 
     public DbSet<Product> Products { get; set; }
