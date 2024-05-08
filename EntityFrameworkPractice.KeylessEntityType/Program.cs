@@ -2,6 +2,7 @@
 using System.Linq.Expressions;
 using EntityFrameworkPractice.KeylessEntityType.DataAccess;
 using EntityFrameworkPractice.KeylessEntityType.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace EntityFrameworkPractice.KeylessEntityType;
 
@@ -96,6 +97,15 @@ internal class Program
                 Console.WriteLine(
                     $"****************************\nKategori\t: {d.CategoryName}\n****************************\nÜrün Bilgileri\nÜrün Adı\t: {d.ProductName}\nFiyatı\t: {d.Price}\n****************************\nStok Durumu\t :{d.Stock}\n****************************\nÜrün Özellikleri\nRenk\t: {d.Color}\nGenişlik\t: {d.Width}\nYükseklik\t: {d.Height}");
             });
+            var productFulls = context.ProductFulls
+                .FromSqlRaw(
+                    @"select p.Id 'Product_Id', p.Name 'ProductName',c.Name 'CategoryName', p.Price, p.Stock, pf.Color, pf.Width, pf.Height from Products as p join Categories as c on p.CategoryId=c.Id join ProductFeatures as pf on p.Id=pf.Id")
+                .ToList();
+
+            foreach (var item in productFulls)
+            {
+                Console.WriteLine($"ID : {item.Product_Id} - Name : {item.ProductName} - Category : {item.CategoryName}");
+            }
         }
     }
 }

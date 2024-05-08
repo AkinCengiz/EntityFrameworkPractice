@@ -19,6 +19,7 @@ public class KeylessEntityTypeDbContext : DbContext
     public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
     public DbSet<ProductFeature> ProductFeatures { get; set; }
+    public DbSet<ProductFull> ProductFulls { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -28,6 +29,7 @@ public class KeylessEntityTypeDbContext : DbContext
         modelBuilder.Entity<Product>().HasOne(p => p.ProductFeature).WithOne(p => p.Product)
             .HasForeignKey<ProductFeature>(p => p.Id);
         modelBuilder.Entity<Product>().Property(p => p.Price).HasPrecision(9, 2);
+        modelBuilder.Entity<ProductFull>().HasNoKey();
         base.OnModelCreating(modelBuilder);
     }
 }

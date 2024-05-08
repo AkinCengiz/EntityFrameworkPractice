@@ -4,6 +4,7 @@ using EntityFrameworkPractice.KeylessEntityType.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EntityFrameworkPractice.KeylessEntityType.Migrations
 {
     [DbContext(typeof(KeylessEntityTypeDbContext))]
-    partial class KeylessEntityTypeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240508080951_CreatedProductsFullTable")]
+    partial class CreatedProductsFullTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
